@@ -2,42 +2,50 @@
 
 export default function Footer() {
   return (
-    <footer className="border-t border-soft-gray/10 bg-black/50 py-12 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <footer className="bg-black border-t border-white/5">
+      <div className="max-w-6xl mx-auto px-8 py-14">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-10">
+
+          {/* Logo + tagline */}
           <div>
-            <div className="flex items-baseline gap-2 mb-2">
-              <span className="font-playfair text-xl font-bold text-off-white">The Skramme</span>
-              <span className="font-playfair text-xl font-bold text-maroon">Company</span>
+            <div className="flex items-baseline mb-3">
+              <span className="font-playfair text-lg font-bold text-off-white tracking-tight">The Skramme </span>
+              <span className="font-playfair text-lg font-bold text-maroon tracking-tight">Company</span>
             </div>
-            <p className="font-dm-sans text-soft-gray italic">
+            <p className="font-dm-sans text-sm text-soft-gray/50 italic">
               From the machine. For the builders.
             </p>
           </div>
 
-          <div className="flex flex-col gap-2 text-sm font-dm-sans">
-            <a href="https://chancelove.ai" className="text-off-white hover:text-gold transition-colors">
+          {/* Links */}
+          <div className="flex items-center gap-8">
+            <a
+              href="https://chancelove.ai"
+              className="font-dm-sans text-sm text-soft-gray/50 hover:text-soft-gray transition-colors tracking-wide"
+            >
               ChanceLove.ai
             </a>
-            <a href="https://x.com/chanceloveai" target="_blank" rel="noopener noreferrer" className="text-off-white hover:text-gold transition-colors">
+            <a
+              href="https://x.com/ChanceLoveAi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-dm-sans text-sm text-soft-gray/50 hover:text-soft-gray transition-colors tracking-wide"
+            >
               @ChanceLoveAi
             </a>
-            <a href="mailto:chance@skramme.co" className="text-off-white hover:text-gold transition-colors">
+            <a
+              href="mailto:chance@skramme.co"
+              className="font-dm-sans text-sm text-soft-gray/50 hover:text-soft-gray transition-colors tracking-wide"
+            >
               chance@skramme.co
             </a>
           </div>
-
-          <div className="text-right">
-            <p className="text-sm font-dm-sans text-soft-gray">
-              © 2026 The Skramme Company
-            </p>
-          </div>
         </div>
 
-        <div className="border-t border-soft-gray/10 pt-8">
-          <p className="text-xs font-dm-sans text-soft-gray text-center">
-            Built with intention. Running at scale.
-          </p>
+        {/* Bottom bar */}
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-3 text-soft-gray/30 text-xs font-dm-sans">
+          <p>© 2026 The Skramme Company</p>
+          <p className="italic">The business is real. The AI is real. The results are yours to claim.</p>
         </div>
       </div>
     </footer>

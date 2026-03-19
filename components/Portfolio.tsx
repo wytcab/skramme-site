@@ -12,19 +12,19 @@ const cards: PortfolioCard[] = [
   {
     title: 'AI Intern Playbook',
     status: 'live',
-    description: 'The practical guide for hiring an AI that actually works in your business.',
+    description: 'The practical guide for hiring an AI that actually works in your business. From identity to daily rhythm — everything a business owner needs to make AI a real team member.',
     ctaText: 'Visit ChanceLove.ai →',
     ctaLink: 'https://chancelove.ai',
   },
   {
     title: 'AI Agent Marketplace',
     status: 'coming-soon',
-    description: 'A curated marketplace of AI agents, skills, and automation workflows for business owners.',
+    description: 'A curated marketplace of AI agents, skills, and automation workflows — built for business owners, not engineers.',
   },
   {
     title: 'AI Agent Swarm Protocol',
     status: 'coming-soon',
-    description: 'Infrastructure for coordinating multiple AI agents working in parallel toward a shared business goal.',
+    description: 'Infrastructure for coordinating multiple AI agents working in parallel toward a shared business goal. The future of AI-native operations.',
   },
   {
     title: 'Token Launch',
@@ -35,44 +35,59 @@ const cards: PortfolioCard[] = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="relative py-24 px-6 bg-black">
-      <div className="max-w-7xl mx-auto">
+    <section id="portfolio" className="bg-black border-t border-white/5">
+      <div className="max-w-6xl mx-auto px-8 py-28 md:py-36">
+
+        {/* Header */}
         <div className="mb-16">
-          <p className="text-sm font-dm-sans text-gold uppercase tracking-widest mb-4">Portfolio</p>
-          <h2 className="font-playfair text-5xl md:text-6xl font-bold text-off-white">
-            What we&apos;re building.
+          <p className="section-label mb-5">Portfolio</p>
+          <h2 className="section-heading max-w-lg">
+            What we&apos;re{' '}
+            <em className="text-maroon" style={{ fontStyle: 'italic' }}>building.</em>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Cards grid */}
+        <div className="grid md:grid-cols-2 gap-px bg-white/5">
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`border border-soft-gray/20 p-8 flex flex-col justify-between transition-all duration-300 ${
-                card.status === 'live' ? 'opacity-100 hover:border-maroon/50' : 'opacity-60'
+              className={`bg-black p-10 flex flex-col gap-6 transition-all duration-200 ${
+                card.status === 'live'
+                  ? 'hover:bg-white/[0.02]'
+                  : 'opacity-50'
               }`}
             >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-playfair text-2xl font-bold text-off-white">{card.title}</h3>
-                  {card.status === 'coming-soon' && (
-                    <span className="text-xs font-dm-sans text-soft-gray uppercase tracking-widest bg-black/50 px-3 py-1 border border-soft-gray/20">
-                      Coming Soon
-                    </span>
-                  )}
-                </div>
-                <p className="text-soft-gray font-dm-sans text-base leading-relaxed">
-                  {card.description}
-                </p>
+              {/* Card header */}
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="font-playfair text-2xl font-bold text-off-white leading-snug">
+                  {card.title}
+                </h3>
+                {card.status === 'coming-soon' && (
+                  <span className="font-dm-sans text-xs text-soft-gray/60 border border-white/10 rounded px-2.5 py-1 whitespace-nowrap tracking-wider uppercase flex-shrink-0">
+                    Coming Soon
+                  </span>
+                )}
+                {card.status === 'live' && (
+                  <span className="font-dm-sans text-xs text-green-400/80 border border-green-600/20 rounded px-2.5 py-1 whitespace-nowrap tracking-wider uppercase flex-shrink-0 bg-green-900/10">
+                    Live
+                  </span>
+                )}
               </div>
 
+              {/* Description */}
+              <p className="font-dm-sans text-[16px] text-soft-gray leading-relaxed flex-1">
+                {card.description}
+              </p>
+
+              {/* CTA */}
               {card.status === 'live' && card.ctaLink && (
-                <div className="mt-6">
+                <div>
                   <a
                     href={card.ctaLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-6 py-2 bg-maroon text-off-white hover:bg-maroon/80 transition-all duration-300 font-dm-sans text-sm font-semibold"
+                    className="btn-maroon inline-block"
                   >
                     {card.ctaText}
                   </a>
@@ -81,6 +96,7 @@ export default function Portfolio() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   )

@@ -1,70 +1,40 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #000000;
-  color: #E8E6E1;
-}
-
-@keyframes subtle-float {
-  0%, 100% {
-    transform: translateY(0px);
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-  50% {
-    transform: translateY(-20px);
+
+  body {
+    @apply bg-black text-off-white;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+@layer components {
+  .section-label {
+    @apply font-dm-sans text-xs font-semibold tracking-[0.2em] uppercase text-gold;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .section-heading {
+    @apply font-playfair text-4xl md:text-5xl font-bold text-off-white leading-tight;
   }
-}
 
-.animate-fade-in-up {
-  animation: fade-in-up 0.8s ease-out forwards;
-}
+  .btn-maroon {
+    @apply font-dm-sans text-sm font-semibold px-6 py-3 bg-maroon text-white rounded-md
+           hover:bg-red-900 transition-all duration-200 tracking-wide;
+  }
 
-.text-maroon {
-  color: #8B1A1A;
-}
+  .btn-outline {
+    @apply font-dm-sans text-sm font-semibold px-6 py-3 border border-maroon/50 text-maroon rounded-md
+           hover:border-maroon hover:bg-maroon hover:text-white transition-all duration-200 tracking-wide;
+  }
 
-.border-maroon {
-  border-color: #8B1A1A;
-}
-
-.hover\:border-maroon:hover {
-  border-color: #8B1A1A;
-}
-
-.bg-maroon {
-  background-color: #8B1A1A;
-}
-
-.text-gold {
-  color: #C9A84C;
-}
-
-.text-soft-gray {
-  color: #A8A5A0;
-}
-
-.bg-soft-gray {
-  background-color: #A8A5A0;
-}
-
-button {
-  transition: all 0.3s ease;
+  .divider {
+    @apply border-t border-white/5 my-0;
+  }
 }
