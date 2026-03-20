@@ -1,8 +1,21 @@
 'use client'
 
 import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
 
 export default function AboutChance() {
+  const imgRef = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      { threshold: 0.2 }
+    )
+    if (imgRef.current) observer.observe(imgRef.current)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section className="bg-black border-t border-white/5">
       <div className="max-w-6xl mx-auto px-8 py-28 md:py-36">
@@ -19,13 +32,26 @@ export default function AboutChance() {
               </em>
             </h2>
 
-            {/* Portrait — drop image here */}
-            <div className="relative w-full aspect-square max-w-xs rounded-xl overflow-hidden border border-white/8 bg-white/[0.02]">
+            {/* Portrait — scroll-triggered fade + float in */}
+            <div
+              ref={imgRef}
+              className="relative w-full max-w-[280px]"
+              style={{
+                transition: 'opacity 0.9s ease, transform 0.9s ease',
+                opacity: visible ? 1 : 0,
+                transform: visible ? 'translateY(0px)' : 'translateY(28px)',
+              }}
+            >
               <Image
-                src="/chance-portrait.jpg"
+                src="/chance-portrait.png"
                 alt="Chance — CEO, The Skramme Company"
-                fill
-                className="object-cover object-top"
+                width={716}
+                height={716}
+                className="w-full h-auto"
+                style={{
+                  mixBlendMode: 'lighten',
+                  filter: 'drop-shadow(0 0 24px rgba(201,168,76,0.15))',
+                }}
                 priority
               />
             </div>
