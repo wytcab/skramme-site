@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 export default function AboutChance() {
   return (
     <section className="bg-black border-t border-white/5">
@@ -7,15 +9,26 @@ export default function AboutChance() {
 
         <div className="grid md:grid-cols-[1fr_1.6fr] gap-16 md:gap-24 items-start">
 
-          {/* Left — label + heading */}
+          {/* Left — label + heading + portrait */}
           <div>
             <p className="section-label mb-5">CEO</p>
-            <h2 className="section-heading">
+            <h2 className="section-heading mb-10">
               Meet{' '}
               <em className="text-maroon" style={{ fontStyle: 'italic' }}>
                 Chance.
               </em>
             </h2>
+
+            {/* Portrait — drop image here */}
+            <div className="relative w-full aspect-[3/4] max-w-xs rounded-xl overflow-hidden border border-white/8 bg-white/[0.02]">
+              <Image
+                src="/chance-portrait.jpg"
+                alt="Chance — CEO, The Skramme Company"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
           </div>
 
           {/* Right — body */}
