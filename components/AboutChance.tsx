@@ -20,7 +20,7 @@ export default function AboutChance() {
             </h2>
 
             {/* Portrait — drop image here */}
-            <div className="relative w-full aspect-[3/4] max-w-xs rounded-xl overflow-hidden border border-white/8 bg-white/[0.02]">
+            <div className="relative w-full aspect-square max-w-xs rounded-xl overflow-hidden border border-white/8 bg-white/[0.02]">
               <Image
                 src="/chance-portrait.jpg"
                 alt="Chance — CEO, The Skramme Company"
