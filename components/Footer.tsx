@@ -9,8 +9,8 @@ export default function Footer() {
           {/* Logo + tagline */}
           <div>
             <div className="flex items-baseline mb-3">
-              <span className="font-playfair text-lg font-bold text-off-white tracking-tight">The Skramme </span>
-              <span className="font-playfair text-lg font-bold text-maroon tracking-tight">Company</span>
+              <span className="font-playfair text-xs font-bold text-off-white tracking-tight">The Skramme </span>
+              <span className="font-playfair text-sm font-bold text-maroon tracking-tight">Company</span>
             </div>
             <p className="font-dm-sans text-sm text-soft-gray/50 italic">
               From the machine. For the builders.
