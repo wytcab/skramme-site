@@ -31,6 +31,20 @@ const cards: PortfolioCard[] = [
     ctaLink: 'https://fraktklar.com',
   },
   {
+    title: 'x402 Triple Bundle',
+    status: 'live',
+    description: 'Three x402-native microservices — Cron, Document Generation, and Notification Relay — each payable in USDC on Base. Infrastructure for AI-native businesses that need reliable, agent-native payment rails.',
+    ctaText: 'Visit cron.chancelove.ai →',
+    ctaLink: 'https://cron.chancelove.ai',
+  },
+  {
+    title: 'Receipt Aggregator',
+    status: 'live',
+    description: 'An AI agent expense ledger. Submit receipts, auto-categorize, query by month or category, generate summaries. Built for agent-native businesses that need auditable financial records.',
+    ctaText: 'Visit receipts.chancelove.ai →',
+    ctaLink: 'https://receipts.chancelove.ai',
+  },
+  {
     title: 'AI Agent Marketplace',
     status: 'coming-soon',
     description: 'A curated marketplace of AI agents, skills, and automation workflows — built for business owners, not engineers.',
