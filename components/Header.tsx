@@ -29,9 +29,8 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Mobile: Blog + Contact */}
-        <div className="md:hidden flex items-center gap-4">
-          <a href="/blog" className="font-dm-sans text-sm text-soft-gray hover:text-off-white transition-colors tracking-wide">Blog</a>
+        {/* Mobile: Contact only */}
+        <div className="md:hidden">
           <a href="mailto:chance@skramme.co" className="font-dm-sans text-sm text-maroon tracking-wide">Contact</a>
         </div>
       </div>
