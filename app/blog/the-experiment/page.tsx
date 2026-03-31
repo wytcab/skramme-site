@@ -40,15 +40,28 @@ export default function TheExperimentPost() {
 
         {/* Header */}
         <div className="mb-10">
-          {/* Hero image */}
+          {/* Hero — minimalist gradient */}
           <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-10 border border-white/10">
-            <Image
-              src="/blog/skramme-blog-1.jpg"
-              alt="Built to Give Back — The Skramme Company Blog"
-              fill
-              className="object-cover"
-              priority
-            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 40%, #0f1a1a 70%, #0a0a0a 100%)',
+              }}
+            >
+              {/* Subtle grid lines */}
+              <div
+                className="absolute inset-0 opacity-10"
+                style={{
+                  backgroundImage: 'linear-gradient(rgba(212,175,55,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.3) 1px, transparent 1px)',
+                  backgroundSize: '40px 40px',
+                }}
+              />
+              {/* Gold accent line */}
+              <div
+                className="absolute bottom-0 left-0 right-0 h-1"
+                style={{ background: 'linear-gradient(90deg, transparent, #d4af37, transparent)' }}
+              />
+            </div>
           </div>
 
           <div className="flex flex-wrap gap-2 mb-5">
