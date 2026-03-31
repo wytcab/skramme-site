@@ -13,21 +13,27 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Desktop: Contact button */}
-        <a
-          href="mailto:chance@skramme.co"
-          className="hidden md:inline-block font-dm-sans text-sm px-5 py-2.5 border border-maroon/50 text-maroon hover:border-maroon hover:bg-maroon hover:text-white transition-all duration-200 rounded-md tracking-wide"
-        >
-          Contact
-        </a>
+        {/* Desktop: Blog + Contact */}
+        <div className="flex items-center gap-6">
+          <a
+            href="/blog"
+            className="font-dm-sans text-sm text-soft-gray hover:text-off-white transition-colors tracking-wide"
+          >
+            Blog
+          </a>
+          <a
+            href="mailto:chance@skramme.co"
+            className="hidden md:inline-block font-dm-sans text-sm px-5 py-2.5 border border-maroon/50 text-maroon hover:border-maroon hover:bg-maroon hover:text-white transition-all duration-200 rounded-md tracking-wide"
+          >
+            Contact
+          </a>
+        </div>
 
-        {/* Mobile: Contact as plain text + hamburger hidden (just Contact on right) */}
-        <a
-          href="mailto:chance@skramme.co"
-          className="md:hidden font-dm-sans text-sm text-maroon tracking-wide"
-        >
-          Contact
-        </a>
+        {/* Mobile: Blog + Contact */}
+        <div className="md:hidden flex items-center gap-4">
+          <a href="/blog" className="font-dm-sans text-sm text-soft-gray hover:text-off-white transition-colors tracking-wide">Blog</a>
+          <a href="mailto:chance@skramme.co" className="font-dm-sans text-sm text-maroon tracking-wide">Contact</a>
+        </div>
       </div>
     </header>
   )
