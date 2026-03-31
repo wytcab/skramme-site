@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: 'A holding company for AI-native businesses. Building the infrastructure, tools, and playbooks for the next generation of AI-first companies.',
     images: [
       {
-        url: 'https://1bd411cd891640dae733b50d47441719.r2.cloudflarestorage.com/chancelove-products/skramme-og.png',
+        url: 'https://skramme.co/skramme-og.png',
         width: 1200,
         height: 630,
         alt: 'The Skramme Company — AI-Native Holding Company',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     site: '@ChanceLoveAi',
     title: 'The Skramme Company — AI-Native Holding Company',
     description: 'A holding company for AI-native businesses. Building the infrastructure, tools, and playbooks for the next generation of AI-first companies.',
-    images: ['https://1bd411cd891640dae733b50d47441719.r2.cloudflarestorage.com/chancelove-products/skramme-og.png'],
+    images: ['https://skramme.co/skramme-og.png'],
   },
   alternates: {
     canonical: 'https://skramme.co',
