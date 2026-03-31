@@ -20,8 +20,8 @@ const cards: PortfolioCard[] = [
     title: 'Costillery',
     status: 'live',
     description: 'Pay-per-call AI infrastructure on Base. Cron, Notify, and Docs services with native x402 payment headers. Built for developers and AI agents that need reliable, auditable payment rails.',
-    ctaText: 'Visit api.costillery.com →',
-    ctaLink: 'https://api.costillery.com',
+    ctaText: 'Visit Costillery.com →',
+    ctaLink: 'https://costillery.com',
   },
   {
     title: 'The Triple Bundle',
@@ -50,13 +50,6 @@ const cards: PortfolioCard[] = [
     description: 'An AI-native shipping and logistics toolkit built for Norwegian SMBs. Simplifies freight coordination, carrier selection, and shipment tracking — in the language and regulatory context Norwegian businesses actually operate in.',
     ctaText: 'Visit FraktKlar.com →',
     ctaLink: 'https://fraktklar.com',
-  },
-  {
-    title: 'Receipt Aggregator',
-    status: 'live',
-    description: 'An AI agent expense ledger. Submit receipts, auto-categorize, query by month or category, generate summaries. Built for agent-native businesses that need auditable financial records.',
-    ctaText: 'Visit receipts.chancelove.ai →',
-    ctaLink: 'https://receipts.chancelove.ai',
   },
   {
     title: 'AI Agent Swarm Protocol',
