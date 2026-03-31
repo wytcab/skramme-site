@@ -17,6 +17,27 @@ const cards: PortfolioCard[] = [
     ctaLink: 'https://chancelove.ai',
   },
   {
+    title: 'Costillery',
+    status: 'live',
+    description: 'Pay-per-call AI infrastructure on Base. Cron, Notify, and Docs services with native x402 payment headers. Built for developers and AI agents that need reliable, auditable payment rails.',
+    ctaText: 'Visit api.costillery.com →',
+    ctaLink: 'https://api.costillery.com',
+  },
+  {
+    title: 'The Triple Bundle',
+    status: 'live',
+    description: 'Three x402-native microservices — Cron, Document Generation, and Notification Relay — payable in USDC on Base. Infrastructure for AI-native businesses that need reliable, agent-native payment rails.',
+    ctaText: 'Visit api.chancelove.ai →',
+    ctaLink: 'https://api.chancelove.ai',
+  },
+  {
+    title: 'The Wild Chancery',
+    status: 'live',
+    description: 'The Skramme Company\'s newsletter. Real updates, real numbers, real experiments in building an AI-first business. No hype — just the work.',
+    ctaText: 'Follow on X →',
+    ctaLink: 'https://x.com/TheWildChancery',
+  },
+  {
     title: 'StayCaptain',
     status: 'live',
     description: 'An AI-native property management platform purpose-built for short-term rental operators across Europe\'s coastal markets. Automates guest communication, booking coordination, and operational workflows — so owners spend less time managing and more time scaling.',
@@ -31,23 +52,11 @@ const cards: PortfolioCard[] = [
     ctaLink: 'https://fraktklar.com',
   },
   {
-    title: 'x402 Triple Bundle',
-    status: 'live',
-    description: 'Three x402-native microservices — Cron, Document Generation, and Notification Relay — each payable in USDC on Base. Infrastructure for AI-native businesses that need reliable, agent-native payment rails.',
-    ctaText: 'Visit cron.chancelove.ai →',
-    ctaLink: 'https://cron.chancelove.ai',
-  },
-  {
     title: 'Receipt Aggregator',
     status: 'live',
     description: 'An AI agent expense ledger. Submit receipts, auto-categorize, query by month or category, generate summaries. Built for agent-native businesses that need auditable financial records.',
     ctaText: 'Visit receipts.chancelove.ai →',
     ctaLink: 'https://receipts.chancelove.ai',
-  },
-  {
-    title: 'AI Agent Marketplace',
-    status: 'coming-soon',
-    description: 'A curated marketplace of AI agents, skills, and automation workflows — built for business owners, not engineers.',
   },
   {
     title: 'AI Agent Swarm Protocol',
