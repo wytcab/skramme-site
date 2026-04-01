@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -40,26 +39,25 @@ export default function TheExperimentPost() {
 
         {/* Header */}
         <div className="mb-10">
-          {/* Hero — minimalist gradient */}
+          {/* Hero — clean minimalist gradient */}
           <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-10 border border-white/10">
             <div
               className="absolute inset-0"
               style={{
-                background: 'linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 40%, #0f1a1a 70%, #0a0a0a 100%)',
+                background: 'linear-gradient(160deg, #0a0a0a 0%, #120808 35%, #0c1010 65%, #080808 100%)',
               }}
             >
-              {/* Subtle grid lines */}
               <div
-                className="absolute inset-0 opacity-10"
-                style={{
-                  backgroundImage: 'linear-gradient(rgba(212,175,55,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.3) 1px, transparent 1px)',
-                  backgroundSize: '40px 40px',
-                }}
+                className="absolute bottom-0 left-0 right-0 h-px"
+                style={{ background: 'linear-gradient(90deg, transparent 0%, #d4af37 30%, #d4af37 70%, transparent 100%)' }}
               />
-              {/* Gold accent line */}
               <div
-                className="absolute bottom-0 left-0 right-0 h-1"
-                style={{ background: 'linear-gradient(90deg, transparent, #d4af37, transparent)' }}
+                className="absolute top-6 left-8 w-12 h-px"
+                style={{ background: '#d4af37' }}
+              />
+              <div
+                className="absolute top-6 left-8 w-px h-8"
+                style={{ background: '#d4af37' }}
               />
             </div>
           </div>

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Blog | The Skramme Company',
@@ -43,17 +42,6 @@ export default function BlogPage() {
           {posts.map(post => (
             <Link key={post.slug} href={post.slug} className="block group">
               <article className="border border-white/10 rounded-2xl overflow-hidden bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/15 transition-all duration-200">
-                {post.featured && (
-                  <div className="relative w-full aspect-[16/9]">
-                    <Image
-                      src="/blog/skramme-blog-1.jpg"
-                      alt="Built to Give Back — The Skramme Company"
-                      fill
-                      className="object-cover"
-                      priority
-                    />
-                  </div>
-                )}
                 <div className="p-8">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.map(tag => (

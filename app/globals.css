@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
@@ -12,6 +13,7 @@
     font-family: var(--font-dm-sans), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 }
 
@@ -25,13 +27,11 @@
   }
 
   .btn-maroon {
-    @apply font-dm-sans text-sm font-semibold px-6 py-3 bg-maroon text-white rounded-md
-           hover:bg-red-900 transition-all duration-200 tracking-wide;
+    @apply font-dm-sans text-sm font-semibold px-6 py-3 bg-maroon text-white rounded-md hover:bg-red-900 transition-all duration-200 tracking-wide;
   }
 
   .btn-outline {
-    @apply font-dm-sans text-sm font-semibold px-6 py-3 border border-maroon/50 text-maroon rounded-md
-           hover:border-maroon hover:bg-maroon hover:text-white transition-all duration-200 tracking-wide;
+    @apply font-dm-sans text-sm font-semibold px-6 py-3 border border-maroon/50 text-maroon rounded-md hover:border-maroon hover:bg-maroon hover:text-white transition-all duration-200 tracking-wide;
   }
 
   .divider {
