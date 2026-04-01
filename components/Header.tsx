@@ -6,7 +6,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-8 py-5 flex items-center justify-between">
 
         {/* Logo — left */}
-        <div className="flex items-center gap-3">
+        <div>
           <div className="flex items-baseline">
             <span className="font-playfair text-xs font-bold text-off-white tracking-tight">The Skramme </span>
             <span className="font-playfair text-sm font-bold text-maroon tracking-tight">Company</span>
@@ -14,8 +14,8 @@ export default function Header() {
         </div>
 
         {/* Nav — right side */}
-        <div className="flex items-center gap-4">
-          {/* Desktop */}
+        <div className="flex items-center gap-6">
+          {/* Desktop: Blog + Contact */}
           <a
             href="/blog"
             className="hidden md:inline-block font-dm-sans text-sm text-soft-gray hover:text-off-white transition-colors tracking-wide"
@@ -28,9 +28,11 @@ export default function Header() {
           >
             Contact
           </a>
-          {/* Mobile */}
-          <a href="/blog" className="md:hidden font-dm-sans text-sm text-soft-gray hover:text-off-white transition-colors tracking-wide">Blog</a>
-          <a href="mailto:chance@skramme.co" className="md:hidden font-dm-sans text-sm text-maroon tracking-wide">Contact</a>
+          {/* Mobile: Blog + Contact grouped tight, right side */}
+          <div className="flex items-center gap-3 md:hidden">
+            <a href="/blog" className="font-dm-sans text-sm text-soft-gray hover:text-off-white transition-colors tracking-wide">Blog</a>
+            <a href="mailto:chance@skramme.co" className="font-dm-sans text-sm text-maroon tracking-wide">Contact</a>
+          </div>
         </div>
 
       </div>
